@@ -147,7 +147,8 @@ const [arrayToRender,setarrayToRender]=useState(customersData)
       <table id="table">
         <Thead />
         <Tbody arrayToRender={arrayToRender} funToRender={setarrayToRender}/>
-       
+       <footer />
+
       </table>
 
     </div>
