@@ -1,0 +1,70 @@
+.row-header {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.05em;
+    color: #606F89;
+    background-color: #F4F7FC;
+}
+
+.checkbox {
+    padding-left: 14px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.sort-name,
+.sort-status {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+#sort-name,
+#sort-status {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox {
+    padding-left: 14px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+#arrow-top,
+#arrow-top-status {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid #606F89;
+}
+
+#arrow-bottom,
+#arrow-bottom-status {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #606F89;
+}
+
+td {
+    padding: 12px 0 12px 0;
+}
+
+.description {
+    width: 260px
+}
+
+.group-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding-left: 5px;
+    cursor: pointer;
+}

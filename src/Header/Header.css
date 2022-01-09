@@ -1,0 +1,5 @@
+.search-header {
+    padding: 20px 0 0 30px;
+    display: flex;
+    justify-content: space-between;
+}

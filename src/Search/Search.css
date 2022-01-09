@@ -1,0 +1,33 @@
+.field-search {
+    padding: 8px 10px 10px 40px;
+    background-color: #DAE1EC;
+    border-radius: 4px;
+    width: 300px;
+    color: #2E3B52;
+    font-size: 14px;
+    line-height: 17px;
+    border: none;
+    outline: none;
+}
+
+.icon-search {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    position: relative;
+    border: solid 2px #6F809E;
+    bottom: 28px;
+    left: 14px;
+}
+
+.icon-search::before {
+    content: "";
+    width: 10px;
+    height: 2px;
+    background-color: #6F809E;
+    border-radius: 3px;
+    position: absolute;
+    transform: rotate( 45deg);
+    left: 8px;
+    top: 12px;
+}
