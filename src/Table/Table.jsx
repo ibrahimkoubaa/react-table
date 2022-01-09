@@ -1,8 +1,10 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Header from '../Header/Header'
 import Thead from '../Thead/Thead'
 import Tbody from '../Tbody/Tbody'
 import './Table.css';
+import Footer from '../Footer/Footer';
+
 
 let customersData = [{
   name: "Ibrahim kouxbaa",
@@ -139,21 +141,19 @@ let customersData = [{
 
 }];
 
-function App() {
-const [arrayToRender,setarrayToRender]=useState(customersData)
+function Table() {
+  const [arrayToRender, setarrayToRender] = useState(customersData)
   return (
     <div>
       <Header myArray={customersData} funToRender={setarrayToRender} />
       <table id="table">
         <Thead />
-        <Tbody arrayToRender={arrayToRender} funToRender={setarrayToRender}/>
-       <footer />
-
+        <Tbody arrayToRender={arrayToRender} funToRender={setarrayToRender} />
       </table>
-
+      <Footer arrayToRender={arrayToRender}/>
     </div>
 
   );
 }
 
-export default App;
+export default Table;

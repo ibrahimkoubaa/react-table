@@ -13,8 +13,8 @@ export let Tbody=({arrayToRender})=>{
 
     return (
         <tbody id="contentOfTable">
-            {arrayToRender.map(customer => (
-                <tr className='customer-data customer-data1'>
+            {arrayToRender.map((customer,arr,index) => (
+                <tr className='customer-data customer-data1' key={customer.id}>
                     <CheckBox />
                     <Name name={customer.name} id={customer.id} />
                     <Description description={customer.description} />

@@ -8,9 +8,10 @@ export const Input = ({ myArray, funToRender }) => {
   
   const searchedCustomers = myArray.filter((customer) => {
       let nameValue = customer.name.toLowerCase();
+    
       let descriptionValue = customer.description.toLowerCase();
       if (nameValue !== undefined) {
-          if (nameValue.includes(customerToSearch) || descriptionValue.includes(customerToSearch)) {
+          if (nameValue.includes(customerToSearch)  || descriptionValue.includes(customerToSearch)) {
               return true
           }
       }

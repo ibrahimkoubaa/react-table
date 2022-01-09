@@ -1,12 +1,10 @@
-
 import "./SelecteRowsPagination.css";
-
 function SelecteRowsPagination() {
   return (
     <div className="right-footer">
                 <div className="selection-row">
-                    <label for="rows-select">Rows per page:</label>
-                    <select name="custumer" id="rows-select" style="border: none;">
+                    <span className="rows-select">Rows per page:</span>
+                    <select name="custumer" id="rows-select" style={{border: "none"}}>
                         <option value="5">5</option>
                         <option value="10">10</option>
                         <option value="15">15</option>
