@@ -5,7 +5,6 @@ import Tbody from '../Tbody/Tbody'
 import './Table.css';
 import Footer from '../Footer/Footer';
 
-
 let customersData = [{
   name: "Ibrahim kouxbaa",
   id: 1221567856,
@@ -150,9 +149,8 @@ function Table() {
         <Thead />
         <Tbody arrayToRender={arrayToRender} funToRender={setarrayToRender} />
       </table>
-      <Footer arrayToRender={arrayToRender}/>
+      <Footer arrayToRender={arrayToRender} />
     </div>
-
   );
 }
 

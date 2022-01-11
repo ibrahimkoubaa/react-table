@@ -401,6 +401,10 @@ td {
     color: #E01A1A;
 }
 
+#rows-select {
+    border: none;
+}
+
 footer {
     display: flex;
     justify-content: space-between;
