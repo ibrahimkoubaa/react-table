@@ -139,13 +139,14 @@ let customersData = [{
 
 }];
 
-function App() {
+export const App=()=> {
 const [arrayToRender,setarrayToRender]=useState(customersData)
+//{console.log(arrayToRender)}
   return (
     <div>
       <Header myArray={customersData} funToRender={setarrayToRender} />
       <table id="table">
-        <Thead />
+        <Thead myArray={customersData} arrayToRender={arrayToRender} funToRender={setarrayToRender}/>
         <Tbody arrayToRender={arrayToRender} funToRender={setarrayToRender}/>
        
       </table>
