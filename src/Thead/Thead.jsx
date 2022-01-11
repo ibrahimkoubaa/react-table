@@ -1,12 +1,79 @@
 import './Thead-style.css';
+import React, { useState } from 'react';
 
-function Thead() {
+let orderToSortName = undefined
+export const Thead = ({ myArray, arrayToRender, funToRender }) => {
+    const [sortName, setsortName] = useState(orderToSortName);
+{console.log(arrayToRender)}
+    if (sortName == undefined) {
+        //c
+        
+        }
+       
+    if (sortName == 'atz') {
+        
+        arrayToRender.sort((a, b) => {
+            let nameA = a.name.toLowerCase();
+            let nameB = b.name.toLowerCase();
+            if (nameA < nameB) {
+                return -1;
+            }
+            if (nameA > nameB) {
+                return 1;
+            }
+            return 0;
+        });
+        
+    };
+
+    if (sortName == 'zta') {
+        
+        arrayToRender.sort((a, b) => {
+            let nameA = a.name.toLowerCase();
+            let nameB = b.name.toLowerCase();
+            if (nameA > nameB) {
+                return -1;
+            }
+            if (nameA < nameB) {
+                return 1;
+            }
+            return 0;
+        });
+        console.log(arrayToRender)
+        funToRender(arrayToRender)
+    };
+    
+
+
+
+
+
+
     return (
         <thead>
             <tr id="row-header" className="row-header">
                 <td className="checkbox"><input type="checkbox" id="checkbox" /></td>
                 <td className="name">
-                    <div id="sort-name">
+                    <div id="sort-name" onClick={() => {
+                        if (sortName == undefined ) {
+                            setsortName('atz')
+
+                            // arrowNBottom.id = 'display';
+                        } else if ( sortName == 'atz') {
+                            setsortName('zta')
+
+                            // arrowNTop.id = 'display';
+                            // arrowNBottom.id = 'arrow-bottom';
+                        } else if (sortName == 'zta') {
+
+                            setsortName(undefined)
+
+                            // arrowNTop.id = 'arrow-top';
+                        }
+                        
+                    }
+
+                    }>
                         <span id="name">NAME</span>
                         <div id="group-name" className="group-cta">
                             <div id="arrow-top"></div>
