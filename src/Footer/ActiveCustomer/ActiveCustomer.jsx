@@ -1,14 +1,16 @@
+import "./ActiveCustomer.css";
 
-
-function ActiveCustomer() {
+export const ActiveCustomer = ({ arrayToRender }) => {
+  const activeCustomes = arrayToRender.filter(x => { if (x.status === "active") { return x.status } })
   return (
     <div className="left-footer">
-                <span>active customers: 
-                    <span id="active-customers" style="font-weight: bold;"></span>
-                <span id="length"></span>
-                </span>
-            </div>
-      
+      <span>active customers:
+        <b id="active-customers">{activeCustomes.length}</b>
+        <span id="length">/{arrayToRender.length}</span>
+      </span>
+    </div>
+
   );
 }
+
 export default ActiveCustomer;

@@ -1,14 +1,13 @@
 import SelecteRowsPagination from "./SelecteRowsPagination/SelecteRowsPagination";
 import ActiveCustomer from "./ActiveCustomer/ActiveCustomer";
 
-
-function Footer() {
+export const Footer = ({ arrayToRender }) => {
   return (
     <footer>
-            <ActiveCustomer/>
-            <SelecteRowsPagination/>
-        </footer>
-      
+      <ActiveCustomer arrayToRender={arrayToRender} />
+      <SelecteRowsPagination />
+    </footer>
   );
 }
+
 export default Footer;

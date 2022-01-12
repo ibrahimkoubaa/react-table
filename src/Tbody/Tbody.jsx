@@ -9,12 +9,11 @@ import Deposit from '../TableContent/Deposit/Deposit'
 import Status from '../TableContent/Status/Status'
 import EditLock from '../TableContent/EditLock/EditLock'
 
-export let Tbody=({arrayToRender})=>{
-
+export let Tbody = ({ arrayToRender }) => {
     return (
         <tbody id="contentOfTable">
-            {arrayToRender.map(customer => (
-                <tr className='customer-data customer-data1'>
+            {arrayToRender.map((customer) => (
+                <tr className='customer-data customer-data1' key={customer.id}>
                     <CheckBox />
                     <Name name={customer.name} id={customer.id} />
                     <Description description={customer.description} />
@@ -28,4 +27,5 @@ export let Tbody=({arrayToRender})=>{
         </tbody>
     )
 };
+
 export default Tbody;
